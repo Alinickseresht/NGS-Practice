@@ -20,3 +20,7 @@ This repository contains my learning notes, practice files, and workflows relate
 
 ## Goal
 Building practical skills in genomics and molecular data analysis.
+
+## First Practical Work
+- Basic PCR notes
+- Simple Python script for ΔΔCt calculation
