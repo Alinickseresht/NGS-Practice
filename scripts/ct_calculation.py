@@ -1,16 +1,18 @@
 
-# Simple ΔΔCt concept demonstration
 
-def delta_ct(ct_target, ct_reference):
-    return ct_target - ct_reference
+# ΔΔCt calculation example
 
-def delta_delta_ct(sample, control):
-    return sample - control
+def delta_ct(target_ct, reference_ct):
+    return target_ct - reference_ct
 
-# Example values
-sample = delta_ct(23, 18)
-control = delta_ct(25, 18)
+def delta_delta_ct(sample_delta_ct, control_delta_ct):
+    return sample_delta_ct - control_delta_ct
 
-fold_change = 2 ** -(delta_delta_ct(sample, control))
+sample = delta_ct(23.5, 18.2)
+control = delta_ct(25.1, 18.0)
 
-print("Fold change:", fold_change)
+ddct = delta_delta_ct(sample, control)
+
+fold_change = 2 ** (-ddct)
+
+print("Fold Change:", round(fold_change, 3))
